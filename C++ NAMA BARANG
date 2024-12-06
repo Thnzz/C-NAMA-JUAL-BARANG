@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Deklarasi variabel
+    string nama_barang;
+    int harga, jumlah, total_harga = 0;
+    char beli_lagi;
+
+    // Memasukkan data barang pertama
+    cout << "Nama Barang: ";
+    cin >> nama_barang;
+    cout << "Harga: ";
+    cin >> harga;
+    cout << "Jumlah: ";
+    cin >> jumlah;
+    total_harga += harga * jumlah;
+
+    // Memeriksa apakah ada barang lain yang dibeli
+    cout << "Apakah ada barang yang anda beli lagi Y/T: ";
+    cin >> beli_lagi;
+
+    while (beli_lagi == 'Y' || beli_lagi == 'y') {
+        cout << "Nama Barang: ";
+        cin >> nama_barang;
+        cout << "Harga: ";
+        cin >> harga;
+        cout << "Jumlah: ";
+        cin >> jumlah;
+        total_harga += harga * jumlah;
+
+        cout << "Apakah ada barang yang anda beli lagi Y/T: ";
+        cin >> beli_lagi;
+    }
+
+    // Menampilkan total harga
+    cout << "Jumlah Harga = " << total_harga << endl;
+
+    return 0;
+}
